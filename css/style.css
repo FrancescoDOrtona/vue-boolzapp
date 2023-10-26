@@ -214,6 +214,38 @@ body {
 
 .chat{
     background-image: url(../img/mine.jpg);
+    padding: 40px;
+}
+
+.chat__messages{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.sent{
+    position: relative;
+    align-self: flex-end;
+    background-color: #D7F9BC;
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 60%;
+}
+
+.received{
+    position: relative;
+    align-self: flex-start;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 60%; 
+}
+
+.chat__hour{
+    font-size: 7px;
+    position: absolute;
+    right: 7px;
+    bottom: 5px;
 }
 
 /* Message bar */
