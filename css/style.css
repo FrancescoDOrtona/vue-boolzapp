@@ -1,3 +1,51 @@
-html{
-    font-family: 'Roboto', sans-serif;
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.grid-container {
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 0.5fr 4fr 0.5fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border: 1px solid red;
+  padding-top: 50px;
+}
+
+.div-1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div-2 {
+  grid-area: 2 / 1 / 4 / 2;
+  height: 100%;
+}
+.div-3 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div-4 {
+  grid-area: 2 / 2 / 3 / 3;
+  min-height: 600px;
+}
+.div-5 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+/* Debugg */
+
+div[class^="div-"] {
+  padding: 30px;
+  border: 1px solid blue;
 }
