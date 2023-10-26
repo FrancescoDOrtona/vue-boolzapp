@@ -137,26 +137,32 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     background-color: #EBE9EB;
     border-bottom: 1px solid lightgray;
 }
 
 .search__btn{
     padding: 6px 15px;
-    border: 1px solid gray;
+    border: none;
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
     background-color: white;
     cursor: pointer;
+    margin-right: 2px;
 }
 
 .search__bar{
     width: 100%;
     padding: 6px;
-    border: 1px solid gray;
+    border: none;
+    background-color: white;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
+}
+
+.search__bar:focus{
+    outline: 1px solid lightgray;
 }
 
 /* Contact list */
@@ -211,3 +217,27 @@ body {
 }
 
 /* Message bar */
+
+.message-bar{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 30px;
+}
+
+.message-bar i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.message-bar__text{
+    flex-grow: 1;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    padding-left: 30px;
+}
+
+.message-bar__text:focus{
+    outline: 1px solid lightgray;
+}
