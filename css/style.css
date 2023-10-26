@@ -10,7 +10,7 @@ html {
 
 body {
   height: 100vh;
-  background-color: #DCD9D5;
+  background-color: #DDDBD4;
 }
 
 /* Structure */
@@ -21,7 +21,7 @@ body {
 .grid-container {
   max-width: 900px;
   margin: 0 auto;
-  height: 100%;
+  min-height: 850px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 70px 4fr 0.5fr;
@@ -35,14 +35,12 @@ body {
 }
 .div-2 {
   grid-area: 2 / 1 / 4 / 2;
-  height: 100%;
 }
 .div-3 {
   grid-area: 1 / 2 / 2 / 3;
 }
 .div-4 {
   grid-area: 2 / 2 / 3 / 3;
-  min-height: 600px;
 }
 .div-5 {
   grid-area: 3 / 2 / 4 / 3;
@@ -53,7 +51,7 @@ body {
     background-color: #019689;
     position: absolute;
     width: 100%;
-    height: 190px;
+    height: 193px;
 }
 
 .profile-img{
@@ -90,6 +88,41 @@ body {
 
 .contacts{
     background-color: white;
+}
+
+.contacts__notify{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: #8EDAFD;
+    font-size: 14px;
+}
+
+.notify-icon{
+    font-size: 18px;
+    background-color: white;
+    color: #8EDAFD;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    /* search bar */
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* current contact */
+
+.current-contact{
+    border-left: 2px solid #E3E1E3;
 }
 
 /* chat */

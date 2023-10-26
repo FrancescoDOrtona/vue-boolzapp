@@ -20,16 +20,34 @@
     <div class="bg-green"></div>
     <div id="app">
       <div class="grid-container">
+
+        <!-- User info -->
         <div class="div-1 user bg-gray">
             <div class="user-info">
                 <img class="profile-img" src="./img/avatar_io.jpg" alt="">
                 <strong>Francesco Pio</strong>
             </div>
             <i class="fa-solid fa-ellipsis-vertical"></i>
-
         </div>
-        <div class="div-2 contacts"></div>
-        <div class="div-3 bg-gray"></div>
+
+        <!-- contacts -->
+        <div class="div-2 contacts">
+            <!-- Notify bar -->
+            <div class="contacts__notify">
+                <i class="fa-solid fa-bell-slash notify-icon"></i>
+                <div>
+                    <p>Ricevi notifiche di nuovi messaggi</p>
+                    <small>Lorem ipsum dolor sit amet consectetur.</small>
+                </div>
+            </div>
+            
+            <!-- Search bar -->
+            <div class="search">
+                <button class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input class="search__bar" type="search" placeholder="Cerca o inizia una nuova chat">
+            </div>
+        </div>
+        <div class="div-3 bg-gray current-contact"></div>
         <div class="div-4 chat"></div>
         <div class="div-5 message-bar bg-gray"></div>
       </div>
