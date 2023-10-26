@@ -10,6 +10,7 @@ html {
 
 body {
   height: 100vh;
+  background-color: #DCD9D5;
 }
 
 /* Structure */
@@ -26,7 +27,6 @@ body {
   grid-template-rows: 70px 4fr 0.5fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  border: 1px solid red;
   padding-top: 50px;
 }
 
@@ -61,6 +61,10 @@ body {
     border-radius: 50%;
 }
 
+.bg-gray{
+    background-color: #EBE9EB;
+}
+
 /* header */
 
 .user{
@@ -68,7 +72,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #EBE9EB;
 }
 
 .user-info{
@@ -79,6 +82,20 @@ body {
 
 /* Debugg */
 
-div[class^="div-"] {
+/* div[class^="div-"] {
   border: 1px solid blue;
+} */
+
+/* contacts sidebar */
+
+.contacts{
+    background-color: white;
 }
+
+/* chat */
+
+.chat{
+    background-image: url(../img/mine.jpg);
+}
+
+/* Message bar */
