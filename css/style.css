@@ -117,6 +117,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    padding: 5px;
+    background-color: #EBE9EB;
+    border-bottom: 1px solid lightgray;
+}
+
+.search__btn{
+    padding: 6px 15px;
+    border: 1px solid gray;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color: white;
+}
+
+.search__bar{
+    width: 100%;
+    padding: 6px;
+    border: 1px solid gray;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 /* current contact */
