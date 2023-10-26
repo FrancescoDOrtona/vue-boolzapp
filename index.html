@@ -27,7 +27,7 @@
                 <img class="profile-img" src="./img/avatar_io.jpg" alt="">
                 <strong>Francesco Pio</strong>
             </div>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <i class="fa-solid fa-ellipsis-vertical user__icon"></i>
         </div>
 
         <!-- contacts -->
@@ -35,9 +35,9 @@
             <!-- Notify bar -->
             <div class="contacts__notify">
                 <i class="fa-solid fa-bell-slash notify-icon"></i>
-                <div>
+                <div class="contacts__notify-text">
                     <p>Ricevi notifiche di nuovi messaggi</p>
-                    <small>Lorem ipsum dolor sit amet consectetur.</small>
+                    <small>Clicca qui per attivare le notifiche</small>
                 </div>
             </div>
             
@@ -48,8 +48,41 @@
                 </button>
                 <input class="search__bar" type="search" placeholder="Cerca o inizia una nuova chat">
             </div>
+
+            <!-- Contacts list -->
+            <ul class="contacts__list">
+                <li class="contacts__item">
+                    <img class="profile-img" src="./img/avatar_1.jpg" alt="">
+                    <div class="contact__info">
+                        <h4>Michele</h4>
+                        <small>Ultimo messaggio</small>
+                    </div>
+                    <small class="contact__hour">12:00</small>
+                </li>
+                <li class="contacts__item">
+                    <img class="profile-img" src="./img/avatar_2.jpg" alt="">
+                    <div class="contact__info">
+                        <h4>Gabriel</h4>
+                        <small>Ultimo messaggio</small>
+                    </div>
+                    <small class="contact__hour">12:00</small>
+                </li>
+            </ul>
         </div>
-        <div class="div-3 bg-gray current-contact"></div>
+
+        <!-- current contact -->
+        <div class="div-3 bg-gray current-contact">           
+                <img class="profile-img" src="./img/avatar_1.jpg" alt="">
+                <div class="contact__info">
+                    <h4>Michele</h4>
+                    <small>Ultimo accesso alle 12:00</small>
+                </div>
+                <div class="current-contact__icon">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i> 
+                </div>           
+        </div>
         <div class="div-4 chat"></div>
         <div class="div-5 message-bar bg-gray"></div>
       </div>

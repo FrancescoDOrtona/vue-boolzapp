@@ -8,6 +8,10 @@ html {
   box-sizing: border-box;
 }
 
+ul, ol, menu{
+    list-style: none;
+}
+
 body {
   height: 100vh;
   background-color: #DDDBD4;
@@ -78,6 +82,11 @@ body {
     gap: 15px;
 }
 
+.user__icon{
+    color: gray;
+    cursor: pointer;
+}
+
 /* Debugg */
 
 /* div[class^="div-"] {
@@ -97,6 +106,16 @@ body {
     padding: 15px;
     background-color: #8EDAFD;
     font-size: 14px;
+}
+
+.contacts__notify-text p{
+    font-weight: bold;
+}
+
+.contacts__notify-text small{
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .notify-icon{
@@ -129,6 +148,7 @@ body {
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
     background-color: white;
+    cursor: pointer;
 }
 
 .search__bar{
@@ -139,10 +159,49 @@ body {
     border-top-right-radius: 8px;
 }
 
+/* Contact list */
+
+.contacts__item{
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.contacts__item:last-child{
+    border: none;
+}
+
+.contact__info{
+    flex-grow: 1;
+}
+
+.contact__hour{
+    font-size: 8px;
+}
 /* current contact */
 
 .current-contact{
     border-left: 2px solid #E3E1E3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.contact__info small{
+    font-size: 10px;
+}
+
+.current-contact__icon{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: gray;
+}
+
+.current-contact__icon i{
+    cursor: pointer;
 }
 
 /* chat */
