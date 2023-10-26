@@ -178,6 +178,10 @@ body {
     border: none;
 }
 
+.contacts__item:hover{
+    background-color: #EBE9EB;
+}
+
 .contact__info{
     flex-grow: 1;
 }
