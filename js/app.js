@@ -182,9 +182,6 @@ createApp({
       ]
     }
   },
-  mounted() {
-    this.messageTimeout
-  },
   methods: {
     // getNewdateFormat(DateTime){
     //   const newDate = DateTime.toFormat(this.dateFormat)
@@ -204,7 +201,7 @@ createApp({
           status: 'sent',
         }
 
-        const messageTimeout = setTimeout(this.receiveMessage(index), 3000)
+        setTimeout(function(){this.receiveMessage(index)}, 3000)
 
       },
 
