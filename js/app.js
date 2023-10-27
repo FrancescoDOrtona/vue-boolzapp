@@ -182,6 +182,9 @@ createApp({
       ]
     }
   },
+  mounted() {
+    this.messageTimeout
+  },
   methods: {
     // getNewdateFormat(DateTime){
     //   const newDate = DateTime.toFormat(this.dateFormat)
@@ -210,7 +213,5 @@ createApp({
         messageArray.push(this.newReceivedMessage)
       }
   },
-  mounted() {
-    this.messageTimeout
-  },
+  
 }).mount('#app')

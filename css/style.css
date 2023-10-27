@@ -15,17 +15,19 @@ ul, ol, menu{
 body {
   height: 100vh;
   background-color: #DDDBD4;
+  overflow: hidden;
 }
 
 /* Structure */
 #app{
     z-index: 2;
     position: relative;
+    overflow: hidden;
 }
 .grid-container {
   max-width: 900px;
   margin: 0 auto;
-  min-height: 850px;
+  height: 850px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 70px 4fr 0.5fr;
@@ -101,6 +103,7 @@ body {
 
 .contacts{
     background-color: white;
+    overflow-y: scroll;
 }
 
 .contacts__notify{
@@ -223,6 +226,7 @@ body {
 .chat{
     background-image: url(../img/mine.jpg);
     padding: 40px;
+    overflow-y: scroll;
 }
 
 .chat__messages{
