@@ -7,6 +7,7 @@ createApp({
     return {
       currentIndex: 0,
       dateFormat: 'dd/LL/yyyy HH:mm:ss',
+      search: '',
       newSentMessage: {
         date: '',
         message: '',
@@ -205,10 +206,18 @@ createApp({
 
       },
 
-      receiveMessage(index){
-        const messageArray = this.contacts[index].messages
-        messageArray.push(this.newReceivedMessage)
-      }
+      receiveMessage(index){       
+          const messageArray = this.contacts[index].messages
+          messageArray.push(this.newReceivedMessage)             
+      },
   },
+  computed: {
+    searchBar (){
+      return this.contacts.filter(contact => {
+        return contact.name.toLowerCase().includes(this.search.toLowerCase())
+      })
+    }
+      
+    }
   
 }).mount('#app')
