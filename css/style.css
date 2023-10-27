@@ -67,6 +67,10 @@ body {
     background-color: #EBE9EB;
 }
 
+.active{
+    background-color: #EBE9EB;
+}
+
 /* header */
 
 .user{

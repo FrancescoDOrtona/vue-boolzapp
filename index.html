@@ -13,6 +13,7 @@
       src="https://kit.fontawesome.com/bfd5138bab.js"
       crossorigin="anonymous"
     ></script>
+    <script src=" https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js "></script>
     <link rel="stylesheet" href="./css/style.css" />
     <title>Boolzap</title>
   </head>
@@ -51,30 +52,21 @@
 
             <!-- Contacts list -->
             <ul class="contacts__list">
-                <li class="contacts__item">
-                    <img class="profile-img" src="./img/avatar_1.jpg" alt="">
+                <li class="contacts__item" v-for="(contact, index) in contacts" :key="index" :class="{'active': index === currentIndex}" @click="changeContactOnClick(index)">
+                    <img class="profile-img" :src="contact.avatar" alt="">
                     <div class="contact__info">
-                        <h4>Michele</h4>
+                        <h4>{{ contact.name }}</h4>
                         <small>Ultimo messaggio</small>
                     </div>
                     <small class="contact__hour">12:00</small>
-                </li>
-                <li class="contacts__item">
-                    <img class="profile-img" src="./img/avatar_2.jpg" alt="">
-                    <div class="contact__info">
-                        <h4>Gabriel</h4>
-                        <small>Ultimo messaggio</small>
-                    </div>
-                    <small class="contact__hour">12:00</small>
-                </li>
             </ul>
         </div>
 
         <!-- current contact -->
         <div class="div-3 bg-gray current-contact">           
-                <img class="profile-img" src="./img/avatar_1.jpg" alt="">
+                <img class="profile-img" :src="contacts[currentIndex].avatar" alt="">
                 <div class="contact__info">
-                    <h4>Michele</h4>
+                    <h4>{{ contacts[currentIndex].name }}</h4>
                     <small>Ultimo accesso alle 12:00</small>
                 </div>
                 <div class="current-contact__icon">
