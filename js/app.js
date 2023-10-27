@@ -7,6 +7,11 @@ createApp({
     return {
       currentIndex: 0,
       dateFormat: 'dd/LL/yyyy HH:mm:ss',
+      newMessage: {
+        date: '',
+        message: '',
+        status: 'sent',
+      },
       contacts: [
         {
           name: "Michele",
@@ -181,5 +186,15 @@ createApp({
       changeContactOnClick(index){
         this.currentIndex = index 
     },
+
+      sendMessage(index){
+        const messageArray = this.contacts[index].messages
+        messageArray.push(this.newMessage)
+        this.newMessage = {
+          date: '',
+          message: '',
+          status: 'sent',
+        }
+      }
   }
 }).mount('#app')
