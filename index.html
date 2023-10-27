@@ -81,7 +81,7 @@
             <ul class="chat__messages">
                 <li :class=" text.status ==='sent' ?  'sent' : 'received'" v-for="(text, index) in contacts[currentIndex].messages" :key="index">
                     <p>{{ text.message }}</p>
-                    <small class="chat__hour">12:00</small>
+                    <small class="chat__hour">{{ text.date }}</small>
                 </li>
             </ul>
         </div>

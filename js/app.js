@@ -173,10 +173,10 @@ createApp({
     }
   },
   methods: {
-    // dateHours(date){
-    //   const newDate = DateTime.toFormat('dd/LL/yyyy HH:mm:ss')
-    //   return data.toString(newDate.TIME_24_SIMPLE)
-    // }
+    // getNewdateFormat(DateTime){
+    //   const newDate = DateTime.toFormat(this.dateFormat)
+    //   return newDate
+    // },
 
       changeContactOnClick(index){
         this.currentIndex = index 
