@@ -79,16 +79,8 @@
         <!-- Chat -->
         <div class="div-4 chat">
             <ul class="chat__messages">
-                <li class="sent">
-                    <p>Ciao come stai?</p>
-                    <small class="chat__hour">12:00</small>
-                </li>
-                <li class="received">
-                    <p>Stasera ci vediamo?</p>
-                    <small class="chat__hour">12:00</small>
-                </li>
-                <li class="sent">
-                    <p>Mi piacerebbe ma devo andare a fare la spesa.</p>
+                <li :class=" text.status ==='sent' ?  'sent' : 'received'" v-for="(text, index) in contacts[currentIndex].messages" :key="index">
+                    <p>{{ text.message }}</p>
                     <small class="chat__hour">12:00</small>
                 </li>
             </ul>

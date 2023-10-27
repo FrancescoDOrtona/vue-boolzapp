@@ -238,6 +238,8 @@ body {
     padding: 15px;
     border-radius: 15px;
     max-width: 60%;
+    margin: 7px 0px;
+
 }
 
 .received{
@@ -246,7 +248,9 @@ body {
     background-color: white;
     padding: 15px;
     border-radius: 15px;
-    max-width: 60%; 
+    max-width: 60%;
+    margin: 7px 0px;
+ 
 }
 
 .chat__hour{
