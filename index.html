@@ -81,7 +81,7 @@
             alt=""
           />
           <div class="contact__info">
-            <h4>{{ contacts[currentIndex].name }}</h4>
+            <h4>{{ searchBar[currentIndex].name }}</h4>
             <small>Ultimo accesso alle 12:00</small>
           </div>
           <div class="current-contact__icon">
@@ -96,7 +96,7 @@
           <ul class="chat__messages">
             <li
               :class=" text.status ==='sent' ?  'sent' : 'received'"
-              v-for="(text, index) in contacts[currentIndex].messages"
+              v-for="(text, index) in searchBar[currentIndex].messages"
               :key="index"
             >
               <p>{{ text.message }}</p>

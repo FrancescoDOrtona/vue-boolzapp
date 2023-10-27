@@ -184,9 +184,10 @@ createApp({
     }
   },
   methods: {
-    // getNewdateFormat(DateTime){
-    //   const newDate = DateTime.toFormat(this.dateFormat)
-    //   return newDate
+    // getNewDateFormat(string,index){
+    //   string.toFormat(this.contacts[index].messages[index].date)
+    //   const newDate = Date(string)
+    //   newDate.toLocaleTimeString('it-IT')
     // },
 
       changeContactOnClick(index){
@@ -202,7 +203,7 @@ createApp({
           status: 'sent',
         }
 
-        setTimeout(function(){this.receiveMessage(index)}, 3000)
+        setTimeout(() => this.receiveMessage(index), 3000)
 
       },
 
