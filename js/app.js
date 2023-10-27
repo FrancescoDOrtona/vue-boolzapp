@@ -7,10 +7,15 @@ createApp({
     return {
       currentIndex: 0,
       dateFormat: 'dd/LL/yyyy HH:mm:ss',
-      newMessage: {
+      newSentMessage: {
         date: '',
         message: '',
         status: 'sent',
+      },
+      newReceivedMessage:  {
+        date: '',
+        message: 'Ok',
+        status: 'received',
       },
       contacts: [
         {
@@ -189,12 +194,23 @@ createApp({
 
       sendMessage(index){
         const messageArray = this.contacts[index].messages
-        messageArray.push(this.newMessage)
-        this.newMessage = {
+        messageArray.push(this.newSentMessage)
+        this.newSentMessage = {
           date: '',
           message: '',
           status: 'sent',
         }
+
+        const messageTimeout = setTimeout(this.receiveMessage(index), 3000)
+
+      },
+
+      receiveMessage(index){
+        const messageArray = this.contacts[index].messages
+        messageArray.push(this.newReceivedMessage)
       }
-  }
+  },
+  mounted() {
+    this.messageTimeout
+  },
 }).mount('#app')
