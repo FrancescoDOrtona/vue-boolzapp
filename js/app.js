@@ -8,6 +8,7 @@ createApp({
       currentIndex: 0,
       dateFormat: 'dd/LL/yyyy HH:mm:ss',
       search: '',
+      active: false,
       newSentMessage: {
         date: '',
         message: '',
@@ -185,7 +186,6 @@ createApp({
   },
   methods: {
     // getNewDateFormat(string,index){
-    //   string.toFormat(this.contacts[index].messages[index].date)
     //   const newDate = Date(string)
     //   newDate.toLocaleTimeString('it-IT')
     // },
@@ -211,6 +211,11 @@ createApp({
           const messageArray = this.contacts[index].messages
           messageArray.push(this.newReceivedMessage)             
       },
+
+      dropDownOnclick(){    
+          this.active = !this.active                   
+      },
+
   },
   computed: {
     searchBar (){
