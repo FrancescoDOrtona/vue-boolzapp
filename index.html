@@ -66,9 +66,9 @@
               <img class="profile-img" :src="contact.avatar" alt="" />
               <div class="contact__info">
                 <h4>{{ contact.name }}</h4>
-                <small>Ultimo messaggio</small>
+                <small>{{ contact.messages.at(-1).message }}</small>
               </div>
-              <small class="contact__hour">12:00</small>
+              <small class="contact__hour">{{ contact.messages.at(-1).date.slice(11,16) }}</small>
             </li>
           </ul>
         </div>
@@ -82,7 +82,7 @@
           />
           <div class="contact__info">
             <h4>{{ searchBar[currentIndex].name }}</h4>
-            <small>Ultimo accesso alle 12:00</small>
+            <small>Ultimo accesso alle {{ searchBar[currentIndex].messages.at(-1).date.slice(11,16) }}</small>
           </div>
           <div class="current-contact__icon">
             <i class="fa-solid fa-circle-notch"></i>
@@ -115,7 +115,7 @@
                   </div>
                 </div>
               </div>
-              <small class="chat__hour">{{ text.date }}</small>
+              <small class="chat__hour">{{ text.date.slice(11,16) }}</small>
             </li>
           </ul>
         </div>

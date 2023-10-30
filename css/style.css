@@ -340,3 +340,14 @@ body {
 .show{
     display: block;
 }
+
+/* scrollbar */
+::-webkit-scrollbar{
+    background-color: #E5E5E5;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:#019689;
+    border-radius: 999px;   
+}
