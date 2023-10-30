@@ -99,17 +99,22 @@
               v-for="(text, index) in searchBar[currentIndex].messages"
               :key="index"
             >
-            <div class="chat__text">
-              <p>{{ text.message }}</p>
+              <div class="chat__text">
+                <p>{{ text.message }}</p>
                 <div class="dropdown">
-                  <i class="fa-solid fa-chevron-down dropdown-icon" @click="dropDownOnclick()" ></i>
-                  <div id="dropdown" class="dropdown-content" v-if="active">
+                  <i
+                    class="fa-solid fa-chevron-down dropdown-icon"
+                    @click="dropDownOnclick()"
+                  ></i>
+                  <div
+                    class="dropdown-content"
+                    :class="{'show': active === true}"
+                  >
                     <a href="#">Dettagli</a>
                     <a href="#">Elimina messaggio</a>
                   </div>
                 </div>
-              
-            </div>              
+              </div>
               <small class="chat__hour">{{ text.date }}</small>
             </li>
           </ul>

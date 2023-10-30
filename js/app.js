@@ -212,8 +212,8 @@ createApp({
           messageArray.push(this.newReceivedMessage)             
       },
 
-      dropDownOnclick(){    
-          this.active = !this.active                   
+      dropDownOnclick(){          
+          this.active = !this.active               
       },
 
   },
